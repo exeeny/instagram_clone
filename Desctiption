@@ -1,0 +1,37 @@
+Project Description:
+IMPORTANT!!! project wad build following FreeCodeCamp video tutorial (https://www.youtube.com/watch?v=ImtZ5yENzgE),
+but since it was an old video with Laravel ver of 5.8, i made my own changes according to the new version (laravel 11) etc
+and instead of vue.js i used alpine.js, because it was inbuild in laravel breeze starter kit for blade templates, which i use for auth system.
+
+This project is a simplified version of Instagram, built with Laravel 11, Blade templates, and a little Alpine.js 
+for interactivity. 
+It provides a social media platform with essential features such as auth system, profile editing, image posting, and a follow system.
+
+Features:
+User registration and login system (using Laravel's built-in authentication).
+Profile management: Edit additional information and profile picture.
+Post pictures with titles.
+Follow/unfollow users and search functionality.
+Basic error handling and validation.
+
+Tech Stack
+Backend and Frontend: Laravel framework, Blade templates, Alpine.js
+Database: Relational database using SQL.
+Tools: Git version control.
+
+How to install:
+
+git clone https://github.com/exeeny/instagram_clone.git
+cd repository-name
+cp .env.example .env
+composer install
+herd php artisan key:generate
+herd php artisan migrate (click yes to make db file)
+
+next:
+
+npm install
+npm run build
+
+done
+
