@@ -1,5 +1,5 @@
 Project Description:
-IMPORTANT!!! project wad build following FreeCodeCamp video tutorial (https://www.youtube.com/watch?v=ImtZ5yENzgE),
+IMPORTANT!!! project was build following FreeCodeCamp video tutorial (https://www.youtube.com/watch?v=ImtZ5yENzgE),
 but since it was an old video with Laravel ver of 5.8, i made my own changes according to the new version (laravel 11) etc
 and instead of vue.js i used alpine.js, because it was inbuild in laravel breeze starter kit for blade templates, which i use for auth system.
 
@@ -15,9 +15,7 @@ Follow/unfollow users and search functionality.
 Basic error handling and validation.
 
 Tech Stack
-Backend and Frontend: Laravel framework, Blade templates, Alpine.js
-Database: Relational database using SQL.
-Tools: Git version control.
+Backend and Frontend: Laravel framework, Blade templates, Alpine.js + Tailwind for styling
 
 How to install:
 
@@ -25,8 +23,8 @@ git clone https://github.com/exeeny/instagram_clone.git
 cd repository-name
 cp .env.example .env
 composer install
-herd php artisan key:generate
-herd php artisan migrate (click yes to make db file)
+php artisan key:generate
+php artisan migrate (click yes to make db file)
 
 next:
 
