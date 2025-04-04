@@ -1,6 +1,6 @@
 Project Description:
 IMPORTANT!!! project was build following FreeCodeCamp video tutorial (https://www.youtube.com/watch?v=ImtZ5yENzgE),
-but since it was an old video with Laravel ver of 5.8, i made my own changes according to the new version (laravel 11) etc
+but since it was an old video with Laravel ver of 5.8, i made my own changes according to the new version (laravel 11) etc and included more features
 and instead of vue.js i used alpine.js, because it was inbuild in laravel breeze starter kit for blade templates, which i use for auth system.
 
 This project is a simplified version of Instagram, built with Laravel 11, Blade templates, and a little Alpine.js 
@@ -12,6 +12,8 @@ User registration and login system (using Laravel's built-in authentication).
 Profile management: Edit additional information and profile picture.
 Post pictures with titles.
 Follow/unfollow users and search functionality.
+search functionality by username
+main page with all posts and individual post feed of followings
 Basic error handling and validation.
 
 Tech Stack
