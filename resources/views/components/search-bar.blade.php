@@ -1,5 +1,5 @@
 <div x-data="searchComponent()">
-    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" placeholder="search" x-model="query" @keyup.debounce.500ms="search" >
+    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" placeholder="search" x-model="query" @keyup.debounce.300ms="search" >
 
     <div x-show="results.length > 0" class="absolute dark:bg-gray-700 dark:text-white bg-white shadow-md rounded mt-1">
         <ul>
@@ -9,6 +9,7 @@
                     
                 </li>
             </template>
+            <a :href="'/searchMore?query=' + encodeURIComponent(query)"  class="px-4 py-2  dark:bg-gray-700 dark:text-white">more results</a>
         </ul>
     </div>
 

@@ -4,7 +4,7 @@
         <div class="grid grid-cols-2">
             <img src="/storage/{{$post->image}}" alt="" class="p-2">
             <div class="p-2">
-                <div class="flex place-items-center gap-3">
+            <div class="flex place-items-center gap-3">
                     <img src="{{$post->user->profile->profile_image()}}" alt="" class="rounded-full w-10 h-10">
                     <p class=" font-medium"><a href="/profiles/{{$post->user->id}}">{{$post->user->username}}</a></p>
 

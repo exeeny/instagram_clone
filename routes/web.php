@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::get('/browsePosts', [PostsController::class, 'browse']);
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/searchMore', [SearchController::class, 'fullSearch']);
 
 
 
