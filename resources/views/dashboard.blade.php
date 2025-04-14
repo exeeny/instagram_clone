@@ -4,7 +4,7 @@
 
     <div>
         @foreach($posts as $post)
-        <div class="container mx-auto max-w-xl">
+        <div class="container mx-auto max-w-xl dark:bg-gray-700 dark:text-white m-2 border bg-gray-200 rounded-sm ">
             <div class="">
                 <a href="/profiles/{{$post->user->id}}"><img src="/storage/{{$post->image}}" alt="" class="p-2"></a>
                 <div class="p-2">

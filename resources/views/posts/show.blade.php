@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <div class="container mx-auto max-w-4xl shadow-md m-8">
+    <div class="container mx-auto max-w-4xl shadow-md m-8 dark:bg-gray-700 dark:text-white">
         <div class="grid grid-cols-2">
             <img src="/storage/{{$post->image}}" alt="" class="p-2">
             <div class="p-2">

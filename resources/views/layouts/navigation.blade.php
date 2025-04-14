@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link> 
 
-                     <x-nav-link :href="route('profiles.show', ['user' => Auth::user()->id])" :active="request()->routeIs('profiles.show')">
+                     <x-nav-link :href="route('profiles.show', ['user' => Auth::user()->id])" :active="request()->routeIs('profiles.show') && request()->route('user')->id == Auth::id()">
                         {{ __('Profile') }}
                     </x-nav-link> 
 
@@ -47,7 +47,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Edit profile') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -83,7 +83,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
 
-             <x-responsive-nav-link :href="route('profiles.show', ['user' => Auth::user()->id])" :active="request()->routeIs('profiles.show')">
+             <x-responsive-nav-link :href="route('profiles.show', ['user' => Auth::user()->id])" :active="request()->routeIs('profiles.show') && request()->route('user')->id == Auth::id()">
                 {{ __('Profile') }}
             </x-responsive-nav-link> 
 
@@ -91,7 +91,7 @@
 
         <div class='pt-3'>
                         <x-search-bar></x-search-bar>
-        </div>
+            </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
@@ -105,7 +105,7 @@
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Edit profile') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->

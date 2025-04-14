@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <div class="container max-w-xl mx-auto m-4 shadow-md p-4">
+    <div class="container max-w-xl mx-auto m-4 shadow-md p-4 dark:bg-gray-700 dark:text-white">
         <div class="grid grid-cols-3 gap-4">
             <div>
                 <img src="{{$user->profile->profile_image()}}" alt="" class="rounded-full w-20 h-20">
