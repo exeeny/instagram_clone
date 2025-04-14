@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ isDarkMode: localStorage.getItem('dark')==='true'}" x-bind:class="{ 'dark': isDarkMode }"
+x-init="$watch('isDarkMode', val => localStorage.setItem('dark', val))">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +27,7 @@
             <x-search-bar></x-search-bar>
 
             <div>
+            <x-modes/>
                 <a href="{{ route('login') }}" class="text-lg rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
                     Log in
                 </a>
