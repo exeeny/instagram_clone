@@ -57,9 +57,9 @@ class ProfilesController extends Controller
         Gate::authorize('update', $user->profile);
 
         $validated = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'url' => 'url',
+            'title' => 'nullable|string',
+            'description' => 'nullable|string',
+            'url' => 'nullable|url',
             'image' => '',
         ]);
         

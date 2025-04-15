@@ -2,7 +2,7 @@
 
 <div class="max-w-md mx-auto mt-10">
     <form method="POST" enctype="multipart/form-data" action="/profiles/{{$user->id}}">
-    <h1 class="font-bold text-xl">Edit profile</h1>
+    <h1 class="font-bold text-xl dark:text-white">Edit profile</h1>
         @csrf
         @method('PATCH')
 
@@ -29,12 +29,14 @@
 
         <div>
             <x-input-label for="image" :value="__('Profile Image')" class="mt-4" />
-            <input type="file" id="image" name="image" >
+            <input class='dark:text-white dark:bg-gray-800 dark:border-gray-600'  type="file" id="image" name="image" >
             <x-input-error :messages="$errors->get('image')" class="mt-2" />
         </div>
 
-        <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-4">
-  Save Profile
+        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mt-3">
+<span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+Save changes
+</span>
 </button>
 
        
