@@ -14,8 +14,15 @@ class Profile extends Model
     }
 
     public function profile_image(){
-        $imagePath = ($this->image) ? $this->image : '/profile/amVh5acEBnxMR8dKW64ZnCcgLvYBaqLaiSUUhyy6.jpg';
-        return '/storage/' . $imagePath;
+        if ($this->image)
+        {
+            return '/storage/' . $this->image;
+        } 
+        else 
+        {
+            return '/images/noImage.jpg';
+        }
+        
     }
 
     public function followers(){
